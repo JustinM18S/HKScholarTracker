@@ -41,8 +41,11 @@ dependencies {
     implementation (libs.volley)
     implementation(libs.dotlottie.android)
     implementation (libs.android.lottie)
-    implementation (libs.converter.gson)
     implementation (libs.viewpager2)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.gson)
+    implementation (libs.logging.interceptor.v491)
 }

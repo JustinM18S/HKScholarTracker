@@ -158,4 +158,31 @@
     <string name="admin_hk_faculty">298</string>
     <string name="admin_total_faculty">Total of Faculties</string>
     <string name="admin_users">Users</string>
+    <string name="add_students">Add Students</string>
+    <string name="manage_profiles">Manage and update user profiles today!</string>
+
+    <string name="student">ange.devera.up@phinamed.com</string>
+    <string name="edit_icon" />
+    <string name="delete_icon" />
+    <string name="ic_add">Add new item</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel2">CANCEL</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="add_student">Add Student</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="user_role">User Role:</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="assigned_to">Assigned to:</string>
+    <string name="email">Email:</string>
+    <string name="first_name">First Name:</string>
+    <string name="hk_duty_type_if_student">HK Duty Type (if student):</string>
+    <string name="last_name">Last Name:</string>
+    <string name="add_professor">Add Professor</string>
+    <string name="total_professor">Total Professor:</string>
+    <string name="full_name">Full Name:</string>
+    <string name="enter_full_name">Enter Fullname</string>
+    <string name="department">Department:</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="re_enter_password">Re-enter New Password</string>
+    <string name="enter_newpassword">Enter New Password</string>
 </resources>

@@ -74,17 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
-    <ImageView
-        android:id="@+id/profileIcon"
-        android:layout_width="50dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="140dp"
-        android:contentDescription="@string/profile_icon"
-        android:src="@drawable/account_profile"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeMessage"
-        app:layout_constraintStart_toEndOf="@+id/welcomeMessage"
-        app:layout_constraintTop_toTopOf="@+id/welcomeMessage"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/upcomingDutiesTitle"
