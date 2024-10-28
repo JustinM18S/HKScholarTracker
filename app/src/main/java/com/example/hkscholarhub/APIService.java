@@ -5,10 +5,10 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-public interface api {
+public interface APIService {
     @FormUrlEncoded
-    @POST("login.php")
-    Call<LoginResponse> loginUser(
+    @POST("api/auth/login")
+    Call<LoginResponse> login(
             @Field("email") String email,
             @Field("password") String password
     );

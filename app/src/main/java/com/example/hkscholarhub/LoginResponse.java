@@ -1,18 +1,10 @@
 package com.example.hkscholarhub;
 
-import com.google.gson.annotations.SerializedName;
-
 public class LoginResponse {
-    @SerializedName("status")
     private boolean status;
-
-    @SerializedName("message")
     private String message;
+    private String userType;
 
-    @SerializedName("role")
-    private String role;
-
-    // Getters
     public boolean isStatus() {
         return status;
     }
@@ -21,7 +13,7 @@ public class LoginResponse {
         return message;
     }
 
-    public String getRole() {
-        return role;
+    public String getUserType() {
+        return userType;
     }
 }

@@ -9,11 +9,12 @@
     tools:context=".FacultyLog">
 
     <!-- Logo -->
+
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="235dp"
         android:layout_height="118dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:contentDescription="@string/logo_desc"
         android:src="@drawable/applogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,29 +26,31 @@
         android:id="@+id/backtologstudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/poppinsbold"
+        android:minHeight="48dp"
+        android:onClick="goBackToFacultyLogStudent"
         android:text="@string/AngelaDevera"
         android:textColor="@android:color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:minHeight="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:onClick="goBackToFacultyLogStudent"
-        android:drawablePadding="10dp"
         app:drawableStartCompat="@drawable/ic_back_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+
+    <!-- List of Duty Hours -->
 
     <LinearLayout
         android:id="@+id/summaryLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:baselineAligned="false"
         android:gravity="center"
@@ -62,8 +65,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             android:background="@drawable/summary_box_bg2"
             android:gravity="center"
             android:orientation="vertical"
@@ -86,11 +89,11 @@
                 android:id="@+id/completedLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/poppinsmedium"
                 android:gravity="center"
                 android:text="@string/total_time"
                 android:textColor="#384D35"
-                android:textSize="16sp"
-                android:fontFamily="@font/poppinsmedium"/>
+                android:textSize="16sp" />
         </LinearLayout>
 
         <!-- Pending Hours -->
@@ -120,236 +123,242 @@
                 android:id="@+id/pendingLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
                 android:gravity="center"
                 android:text="@string/pending1"
                 android:textColor="#384D35"
-                android:textSize="16sp"
-                android:fontFamily="@font/poppinsmedium"/>
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
-
-    <!-- List of Duty Hours -->
 
     <TextView
         android:id="@+id/upcomingDutiesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppinsbold"
         android:text="@string/duties"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summaryLayout" />
 
-    <LinearLayout
-        android:id="@+id/dtrDetailsLayout"
-        android:layout_width="370dp"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/dtr_bg"
-        android:orientation="vertical"
-        android:padding="15dp"
+        android:fillViewport="true"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upcomingDutiesTitle">
+        app:layout_constraintTop_toBottomOf="@id/upcomingDutiesTitle">
 
-        <!-- Record Row 1 -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="8dp">
-            <!--calendar icon -->
-
-            <ImageView
-                android:id="@+id/calendarIcon1"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/calendar1" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/timeText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="@string/dtr_hour"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/dateText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_date"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-                <TextView
-                    android:id="@+id/dateTask1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_task"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/totalHours1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/poppinsbold"
-                android:text="@string/dtr_hour1"
-                android:textColor="#172815"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <!--Second Row-->
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/dtrDetailsLayout"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:background="@drawable/dtr_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
 
-            <ImageView
-                android:id="@+id/calendarIcon2"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/calendar1" />
-
+            <!-- Record Row 1 -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+                <!--calendar icon -->
+
+                <ImageView
+                    android:id="@+id/calendarIcon1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/calendar1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timeText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/dtr_hour"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/dateText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_date"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dateTask1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_task"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/timeText2"
+                    android:id="@+id/totalHours1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppinsbold"
-                    android:text="@string/dtr_hour2"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/dateText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_date2"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-                <TextView
-                    android:id="@+id/dateTask2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_task2"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-
+                    android:text="@string/dtr_hour1"
+                    android:textColor="#172815"
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/totalHours2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/poppinsbold"
-                android:text="@string/dtr_hhmm2"
-                android:textColor="#172815"
-                android:textSize="18sp" />
-        </LinearLayout>
-        <!--Third Row-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <ImageView
-                android:id="@+id/calendarIcon3"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/todo3"
-                android:src="@drawable/calendar1" />
-
+            <!--Second Row-->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/calendarIcon2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/calendar1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timeText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/dtr_hour2"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/dateText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_date2"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dateTask2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_task2"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/timeText3"
+                    android:id="@+id/totalHours2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppinsbold"
-                    android:text="@string/dtr_hour3"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
+                    android:text="@string/dtr_hhmm2"
+                    android:textColor="#172815"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!--Third Row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/calendarIcon3"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/todo3"
+                    android:src="@drawable/calendar1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timeText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsbold"
+                        android:text="@string/dtr_hour3"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/dateText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_date3"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dateTask3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/dtr_task3"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/dateText3"
+                    android:id="@+id/totalHours3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_date3"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-                <TextView
-                    android:id="@+id/dateTask3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="@string/dtr_task3"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="@string/dtr_hhmm3"
+                    android:textColor="#172815"
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/totalHours3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/poppinsbold"
-                android:text="@string/dtr_hhmm3"
-                android:textColor="#172815"
-                android:textSize="18sp" />
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/add_entry_btn"
         android:layout_width="313dp"
         android:layout_height="53dp"
-        android:layout_marginTop="28dp"
         android:backgroundTint="#8EC885"
         android:fontFamily="@font/poppinsbold"
         android:text="@string/add_entry"
@@ -358,7 +367,25 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dtrDetailsLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
 
-
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/nav_bar_background"
+        android:clipToPadding="true"
+        android:elevation="0dp"
+        app:itemIconSize="30dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        app:itemHorizontalTranslationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

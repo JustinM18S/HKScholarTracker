@@ -133,13 +133,13 @@
         android:id="@+id/upcomingDutiesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/duties"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summaryLayout" />
 
@@ -160,8 +160,8 @@
         <TextView
             android:id="@+id/duty_task_label"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/poppinsbold"
             android:text="@string/duty_task"
             android:textSize="16sp"
@@ -184,18 +184,42 @@
             app:layout_constraintTop_toBottomOf="@+id/duty_task_label" />
 
         <TextView
-            android:id="@+id/duty_date_label"
+            android:id="@+id/assigned_room_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppinsbold"
-            android:text="@string/duty_date"
+            android:text="@string/assigned_room"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.035"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerDutyTask" />
 
+        <EditText
+            android:id="@+id/editTextDutyDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="date"
+            android:background="@drawable/rounded_edittext"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_calendar"
+            android:focusable="true"
+            android:hint="@string/dd_mm_yyyy"
+            android:inputType="date"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duty_date_label" />
+
+        <TextView
+            android:id="@+id/duty_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:text="@string/duty_date"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="175dp" />
 
         <EditText
             android:id="@+id/editTextDutyDate"
